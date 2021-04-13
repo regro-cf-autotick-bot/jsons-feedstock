@@ -1,6 +1,5 @@
-
 {% set name = "jsons" %}
-{% set version = "1.4.1" %}
+{% set version = "1.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +7,12 @@ package:
 
 source:
   url: https://github.com/ramonhagenaars/jsons/archive/v{{ version }}.tar.gz
-  sha256: 4187521c033a77d9116a5132b6f597aefe92a91679ed5b9a55923948c7424898
+  sha256: ee711055af875ca9d47e2c5b2449231d19dd5e401013f6a22ce60097f755c560
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -36,7 +35,7 @@ test:
     - tests
     - test_resources
   commands:
-    - pip check    
+    - pip check
     - pytest --pyargs jsons .
 
 about:
@@ -44,11 +43,8 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Turn Python objects into dicts or (json)strings'
-  description: 
-    Turn Python objects into dicts or (json)strings
-    No changes required to your objects
-    Easily customizable and extendable
+  summary: Turn Python objects into dicts or (json)strings
+  description: Turn Python objects into dicts or (json)strings No changes required to your objects Easily customizable and extendable
   doc_url: https://jsons.readthedocs.io/
   dev_url: https://github.com/ramonhagenaars/jsons/
 
