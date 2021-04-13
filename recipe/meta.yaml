@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.5
-    - typish >=1.9.1
+    - typish >=1.9.2
 
 test:
   imports:
