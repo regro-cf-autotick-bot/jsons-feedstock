@@ -1,5 +1,5 @@
 {% set name = "jsons" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ramonhagenaars/jsons/archive/v{{ version }}.tar.gz
-  sha256: 758379514007344faeca75faa79e7fab8027bd9ee540085af1a3f0393cc1f96d
+  sha256: 4f7677322e7c54afc7f7a71949537a906f15e747da951025bafd6b94b921957f
 
 build:
   noarch: python
