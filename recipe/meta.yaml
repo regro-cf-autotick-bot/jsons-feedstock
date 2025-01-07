@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - typish >=1.9.2
 
 test:
@@ -29,7 +29,7 @@ test:
   requires:
     - pip
     - dataclasses
-    - python >= 3.6
+    - python {{ python_min }}
     - pytest
   source_files:
     - tests
